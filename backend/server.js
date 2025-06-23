@@ -20,11 +20,7 @@ const app = express();
 const PORT = process.env.PORT || 5003;
 
 // CORS configuration
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true, // if you're sending cookies or auth headers
-}));
-app.options('*', cors());
+app.use(cors());
 
 
 // Body parsing middleware
