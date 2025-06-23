@@ -3,7 +3,7 @@ import axios from 'axios';
 const API_URL = process.env.REACT_APP_API_URL || 'https://military-asset-management-x7vl.onrender.com';
 
 const api = axios.create({
-    baseURL: API_URL,
+    baseURL: 'https://military-asset-management-x7vl.onrender.com/api',
     timeout: 10000,
     headers: {
         'Content-Type': 'application/json',
