@@ -48,25 +48,26 @@ const Login = () => {
     };
 
     return (
-        <Container component="main" maxWidth="sm">
-            <Box
-                sx={{
-                    minHeight: '100vh',
-                    display: 'flex',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                }}
-            >
+        <Box
+            sx={{
+                backgroundColor: '#f0f4f8',
+                minHeight: '100vh',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                py: 4,
+            }}
+        >
+            <Container maxWidth="sm">
                 <Paper
-                    elevation={6}
+                    elevation={4}
                     sx={{
                         padding: 5,
+                        borderRadius: 4,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        width: '100%',
-                        maxWidth: 420,
-                        borderRadius: 3,
+                        backgroundColor: '#ffffff',
                     }}
                 >
                     <Box
@@ -81,7 +82,7 @@ const Login = () => {
                         <LockIcon sx={{ color: 'white', fontSize: 40 }} />
                     </Box>
 
-                    <Typography component="h1" variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
+                    <Typography component="h1" variant="h5" fontWeight="bold" sx={{ mb: 1 }}>
                         Military Asset Management
                     </Typography>
 
@@ -132,7 +133,10 @@ const Login = () => {
                                 py: 1.5,
                                 fontWeight: 600,
                                 fontSize: '1rem',
-                                letterSpacing: 0.5,
+                                textTransform: 'none',
+                                ':hover': {
+                                    backgroundColor: 'primary.dark',
+                                },
                             }}
                             disabled={loading}
                         >
@@ -140,21 +144,27 @@ const Login = () => {
                         </Button>
                     </Box>
 
-                    <Divider sx={{ width: '100%', mt: 2, mb: 2 }} />
+                    <Divider sx={{ width: '100%', my: 2 }} />
 
                     <Box sx={{ textAlign: 'center' }}>
                         <Typography variant="body2" color="text.secondary" gutterBottom>
-                            Demo Credentials
+                            Demo Credentials (case-sensitive)
                         </Typography>
                         <Box sx={{ fontFamily: 'monospace', color: 'text.secondary' }}>
-                            <Typography variant="body2">Admin: admin / password123</Typography>
-                            <Typography variant="body2">Commander: commander / password123</Typography>
-                            <Typography variant="body2">Logistics: logistic / password123</Typography>
+                            <Typography variant="body2">admin / password123</Typography>
+                            <Typography variant="body2">commander / password123</Typography>
+                            <Typography variant="body2">logistic / password123</Typography>
                         </Box>
+                        <Typography
+                            variant="caption"
+                            sx={{ mt: 1, display: 'block', color: 'error.main' }}
+                        >
+                            * All usernames and passwords must be lowercase.
+                        </Typography>
                     </Box>
                 </Paper>
-            </Box>
-        </Container>
+            </Container>
+        </Box>
     );
 };
 
