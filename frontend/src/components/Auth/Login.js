@@ -9,6 +9,7 @@ import {
     CircularProgress,
     Container,
     Paper,
+    Divider,
 } from '@mui/material';
 import { Lock as LockIcon } from '@mui/icons-material';
 import { useAuth } from '../../contexts/AuthContext';
@@ -52,34 +53,35 @@ const Login = () => {
                 sx={{
                     minHeight: '100vh',
                     display: 'flex',
-                    flexDirection: 'column',
                     justifyContent: 'center',
                     alignItems: 'center',
                 }}
             >
                 <Paper
-                    elevation={3}
+                    elevation={6}
                     sx={{
-                        padding: 4,
+                        padding: 5,
                         display: 'flex',
                         flexDirection: 'column',
                         alignItems: 'center',
                         width: '100%',
-                        maxWidth: 400,
+                        maxWidth: 420,
+                        borderRadius: 3,
                     }}
                 >
                     <Box
                         sx={{
                             backgroundColor: 'primary.main',
                             borderRadius: '50%',
-                            p: 2,
+                            padding: 2,
                             mb: 2,
+                            boxShadow: 3,
                         }}
                     >
                         <LockIcon sx={{ color: 'white', fontSize: 40 }} />
                     </Box>
 
-                    <Typography component="h1" variant="h4" sx={{ mb: 1, fontWeight: 'bold' }}>
+                    <Typography component="h1" variant="h5" sx={{ mb: 1, fontWeight: 'bold' }}>
                         Military Asset Management
                     </Typography>
 
@@ -124,23 +126,31 @@ const Login = () => {
                             type="submit"
                             fullWidth
                             variant="contained"
-                            sx={{ mt: 3, mb: 2, py: 1.5 }}
+                            sx={{
+                                mt: 3,
+                                mb: 2,
+                                py: 1.5,
+                                fontWeight: 600,
+                                fontSize: '1rem',
+                                letterSpacing: 0.5,
+                            }}
                             disabled={loading}
                         >
-                            {loading ? <CircularProgress size={24} /> : 'Sign In'}
+                            {loading ? <CircularProgress size={24} color="inherit" /> : 'Sign In'}
                         </Button>
                     </Box>
 
-                    <Box sx={{ mt: 2, textAlign: 'center' }}>
-                        <Typography variant="body2" color="text.secondary">
-                            Demo Credentials:
+                    <Divider sx={{ width: '100%', mt: 2, mb: 2 }} />
+
+                    <Box sx={{ textAlign: 'center' }}>
+                        <Typography variant="body2" color="text.secondary" gutterBottom>
+                            Demo Credentials
                         </Typography>
-                        <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'monospace' }}>
-                            Admin: admin / password123
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary" sx={{ fontFamily: 'monospace' }}>
-                            Commander: commander / password123
-                        </Typography>
+                        <Box sx={{ fontFamily: 'monospace', color: 'text.secondary' }}>
+                            <Typography variant="body2">Admin: admin / password123</Typography>
+                            <Typography variant="body2">Commander: commander / password123</Typography>
+                            <Typography variant="body2">Logistics: logistic / password123</Typography>
+                        </Box>
                     </Box>
                 </Paper>
             </Box>
@@ -148,4 +158,4 @@ const Login = () => {
     );
 };
 
-export default Login; 
+export default Login;
