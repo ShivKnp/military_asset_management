@@ -1,0 +1,10 @@
+2025-06-24 01:25:49 [31merror[39m: Error approving transfer 6859aefa627c9f4282254c4d: Cannot increment with non-numeric argument: {quantity: "23"}
+2025-06-24 01:25:56 [31merror[39m: Error rejecting transfer 6859aefa627c9f4282254c4d: Cannot read properties of undefined (reading '_id')
+2025-06-24 01:26:06 [31merror[39m: Error approving transfer 6859ad1d627c9f4282254c4b: Cannot increment with non-numeric argument: {quantity: "43"}
+2025-06-24 01:26:19 [31merror[39m: Error approving transfer 6859ad1d627c9f4282254c4b: Cannot increment with non-numeric argument: {quantity: "43"}
+2025-06-24 01:50:36 [31merror[39m: Error approving transfer 6859ad1d627c9f4282254c4b: Cannot increment with non-numeric argument: {quantity: "43"}
+2025-06-24 01:50:37 [31merror[39m: Error approving transfer 6859ad1d627c9f4282254c4b: Cannot increment with non-numeric argument: {quantity: "43"}
+2025-06-24 01:50:37 [31merror[39m: Error approving transfer 6859ad1d627c9f4282254c4b: Cannot increment with non-numeric argument: {quantity: "43"}
+2025-06-24 01:50:37 [31merror[39m: Error approving transfer 6859ad1d627c9f4282254c4b: Cannot increment with non-numeric argument: {quantity: "43"}
+2025-06-24 01:50:37 [31merror[39m: Error approving transfer 6859ad1d627c9f4282254c4b: Cannot increment with non-numeric argument: {quantity: "43"}
+2025-06-24 01:50:44 [31merror[39m: Error rejecting transfer 6859ad1d627c9f4282254c4b: Cannot read properties of undefined (reading '_id')
